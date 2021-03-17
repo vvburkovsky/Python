@@ -53,7 +53,7 @@ def main (message):
       bot.send_message(message.chat.id, text ='На когда надо', reply_markup = menu1)
 
     if message.text == 'Погода сейчас':
-      bot.send_message(message.chat.id, '\n'.join(wc.current))
+      bot.send_message(message.chat.id, '\n'.join(wc.weather_one_day()))
     
     if message.text == 'Погода на 3 дня':
       bot.send_message(message.chat.id, wc3.weather_today() + '\n' + wc3.weather_tomorrow() + '\n' + wc3.weather_day_after_tomorrow())
